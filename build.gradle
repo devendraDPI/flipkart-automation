@@ -1,9 +1,6 @@
-
 plugins {
     id 'java'
 }
-
-
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
@@ -18,24 +15,23 @@ repositories {
 }
 
 dependencies {
-
-    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
-   
-    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
-    implementation 'io.github.bonigarcia:webdrivermanager:5.5.3'
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation group: 'org.testng', name: 'testng', version: '7.10.2'
 
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-    implementation 'org.seleniumhq.selenium:selenium-java:4.14.0'
-
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.20.0'
 }
 
-//task startScript(type:Exec) {
-//    commandLine './selenium-run.sh'
-//}
+test {
+    useTestNG() {
+        suites 'src/test/resources/testng.xml'
+    }
 
-//run.dependsOn startScript
-
-//test.dependsOn startScript
+    // Configure test logging
+    testLogging {
+        showStandardStreams = true
+        events "passed", "skipped", "failed"
+    }
+}
 
 mainClassName = 'demo.App'
