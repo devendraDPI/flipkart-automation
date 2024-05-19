@@ -1,24 +1,23 @@
-# Project Name - _Project Author (Change Me)_
+# Flipkart Automation
+Automate the flipkart website and return the count of items with different Star ratings, Prices and number of Reviews.
 
-## Project Name and Description:
-A concise yet descriptive title and an overview of the project’s purpose.
+## Prerequisites
+1. Java 21
+2. Gradle 7.5.1
+3. VS Code 1.89.1
 
-## Installation Instructions:
+## Installation Instructions
 Clear steps to set up and run the project locally.
-> Example:
-```
-# java version 17
-java --version
-```
-
-## Usage and Examples:
-Provide sample code or usage scenarios to showcase how the project works.
-> Example:
-```
-# to run the project
-./gradlew run
-```
+1. Make clone of this repo
+2. Open in VS code IDE
+3. Build using `./gradlew build` command
+4. Run test using `./gradlew test` command
 
 ## Important Links:
-Details about useful external links
- 
+
+1. [Flipkart](https://www.flipkart.com)
+2. [Test Cases](https://docs.google.com/spreadsheets/d/14AtYHcjHRRCa7hKSYgbidhab7NZreFx0lf8brptd5Ig/edit?usp=sharing)
+
+## Screenshots
+![Flipkart Web Application](screenshots/Screenshot20240520003240.png)
+> Flipkart Web Application
