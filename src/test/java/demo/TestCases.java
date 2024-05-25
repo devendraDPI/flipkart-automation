@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import demo.utils.ActionsWrapper;
@@ -14,7 +14,7 @@ import demo.utils.FlipkartUtils;
 public class TestCases {
     WebDriver driver;
 
-    @BeforeSuite
+    @BeforeClass
     public void createDriver() {
         FlipkartUtils.logStatus("createDriver", "Creating driver");
 
@@ -91,7 +91,7 @@ public class TestCases {
         FlipkartUtils.getTitleAndImageUrl(driver, 5);
     }
 
-    @AfterSuite
+    @AfterClass
     public void quitDriver() {
         FlipkartUtils.logStatus("quitDriver", "Quitting driver");
         // Quit the WebDriver instance
